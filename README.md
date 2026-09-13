@@ -95,12 +95,6 @@ To stop the application:
 docker compose down
 ```
 
-## Project Status
-
-**In Development**
-
-The project is actively being developed. Additional backend and API functionality is planned as part of the next development stage.
-
 ## Developer
 
 **Farnaz Zahedi Moghadam**
