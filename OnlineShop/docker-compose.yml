@@ -1,0 +1,65 @@
+name: onlineshop
+
+services:
+
+  sqlserver:
+    container_name: onlineshop-sql
+    hostname: sqlserver
+
+    image: mcr.microsoft.com/mssql/server:2022-latest
+
+    restart: unless-stopped
+
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "STr0ng123@"
+      MSSQL_PID: "Evaluation"
+
+    ports:
+      - "1434:1433"
+
+    volumes:
+      - sql-data:/var/opt/mssql
+
+    networks:
+      - backend
+
+
+  app:
+    container_name: onlineshop-app
+    hostname: onlineshop-app
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    restart: unless-stopped
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__OnlineShopConnection: "Server=sqlserver,1433;Database=OnlineShopDb;User Id=sa;Password=STr0ng123;TrustServerCertificate=True"
+
+    depends_on:
+      - sqlserver
+
+    networks:
+      - frontend
+      - backend
+
+
+networks:
+
+  frontend:
+    driver: bridge
+
+  backend:
+    driver: bridge
+
+
+volumes:
+
+  sql-data:
+    name: onlineshop-sql-data
