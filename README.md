@@ -1,8 +1,8 @@
-- OnlineShop
+# OnlineShop
 
-An e-commerce web application built with ASP.NET Core MVC, Entity Framework Core, and Clean Architecture.
+An e-commerce web application built with **ASP.NET Core 9 MVC**, **Entity Framework Core 9**, **SQL Server**, and **Clean Architecture**.
 
- --Technologies
+## Technologies
 
 * ASP.NET Core 9 MVC
 * C#
@@ -20,12 +20,13 @@ An e-commerce web application built with ASP.NET Core MVC, Entity Framework Core
 * Docker Compose
 * Git & GitHub
 
--- Features
+## Features
 
 * User registration and login
 * Password hashing
 * User management
 * Role management
+* Role-based authorization
 * Admin area
 * Product group management
 * Product management
@@ -33,33 +34,74 @@ An e-commerce web application built with ASP.NET Core MVC, Entity Framework Core
 * Product filtering by group
 * Product details
 * Shopping cart
-* Add/remove products from cart
+* Add and remove products from cart
 * Product pagination
 * Responsive UI with Bootstrap
 * Dockerized application environment
 * Docker Compose configuration
 
--- Architecture
+## Architecture
 
-The project follows a Clean Architecture structure:
+The project follows a **Clean Architecture** structure with clear separation of concerns:
 
-* Web Layer
-* Application Layer
-* Domain Layer
-* Infrastructure Data Layer
-* Infrastructure IoC Layer
+```text
+OnlineShop
+│
+├── Web
+├── Application
+├── Domain
+├── Infrastructure.Data
+└── Infrastructure.IoC
+```
 
--- Docker
+### Layers
 
-The application can be containerized and run using Docker and Docker Compose.
+* **Web Layer** — MVC controllers, views, authentication, and presentation logic
+* **Application Layer** — application services, DTOs, interfaces, and business operations
+* **Domain Layer** — entities and core domain logic
+* **Infrastructure Data Layer** — Entity Framework Core, DbContext, repositories, and database access
+* **Infrastructure IoC Layer** — dependency injection and service registration
 
--- Project Status
+## Docker
 
---In Development--
+The application can be built and run using Docker and Docker Compose.
 
-The project is actively being developed, with additional backend and API functionality planned.
+### Run with Docker Compose
 
--- Developer
+Make sure **Docker Desktop** is installed and running.
 
---Farnaz Zahedi Moghadam --
+Clone the repository:
+
+```bash
+git clone https://github.com/Farnaz-zahedi-m/OnlineShop.git
+cd OnlineShop
+```
+
+Build and start the application:
+
+```bash
+docker compose up --build
+```
+
+To run the containers in the background:
+
+```bash
+docker compose up -d
+```
+
+To stop the application:
+
+```bash
+docker compose down
+```
+
+## Project Status
+
+**In Development**
+
+The project is actively being developed. Additional backend and API functionality is planned as part of the next development stage.
+
+## Developer
+
+**Farnaz Zahedi Moghadam**
 Software Engineer | .NET Developer
