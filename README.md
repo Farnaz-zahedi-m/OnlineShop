@@ -1,64 +1,65 @@
-!\[Build Status](https://github.com/PhoenixIntegratedBusiness/OnlineShop/actions/workflows/CICD.yml/badge.svg)
+- OnlineShop
 
-# OnlineShop ASP.NET Core 8
+An e-commerce web application built with ASP.NET Core MVC, Entity Framework Core, and Clean Architecture.
 
-An e-commerce project built with ASP.NET Core MVC and Clean Architecture.
+ --Technologies
 
-## Technologies
--ASP.NET Core 8 MVC
--C#
--Entity Framework Core
--SQL Server
--Clean Architecture
--Repository Pattern
--Service Layer
--AutoMapper
--ASP.NET Core Identity PasswordHasher
--Bootstrap
--JavaScript / jQuery
--HTML / CSS
--Git & GitHub
+* ASP.NET Core 9 MVC
+* C#
+* Entity Framework Core 9
+* SQL Server
+* Clean Architecture
+* Repository Pattern
+* Service Layer
+* AutoMapper
+* ASP.NET Core Identity PasswordHasher
+* Bootstrap
+* JavaScript / jQuery
+* HTML / CSS
+* Docker
+* Docker Compose
+* Git & GitHub
 
-## Features
+-- Features
 
--User registration and login
--Password hashing
--User management
--Role management
--Admin area
--Product group management
--Product management
--Product image and gallery management
--Product filtering by group
--Product details
--Shopping cart
--Add/remove products from cart
--Product pagination
--AutoMapper integration
--Repository and Service patterns
--Clean Architecture structure
--Responsive UI with Bootstrap
+* User registration and login
+* Password hashing
+* User management
+* Role management
+* Admin area
+* Product group management
+* Product management
+* Product image and gallery management
+* Product filtering by group
+* Product details
+* Shopping cart
+* Add/remove products from cart
+* Product pagination
+* Responsive UI with Bootstrap
+* Dockerized application environment
+* Docker Compose configuration
 
-## Architecture
--Web Layer
--Application Layer
--Domain Layer
--Infrastructure Layers
+-- Architecture
 
+The project follows a Clean Architecture structure:
 
-## Developer
-Farnaz Zahedi
+* Web Layer
+* Application Layer
+* Domain Layer
+* Infrastructure Data Layer
+* Infrastructure IoC Layer
+
+-- Docker
+
+The application can be containerized and run using Docker and Docker Compose.
+
+-- Project Status
+
+--In Development--
+
+The project is actively being developed, with additional backend and API functionality planned.
+
+-- Developer
+
+--Farnaz Zahedi Moghadam --
 Software Engineer | .NET Developer
-
-
-## Future Improvements
-- Web API
-- JWT Authentication
-- Unit Testing
-
-
-## Project Status
--In Development
--The project will continue to evolve as new backend and API features are added.
-
-
